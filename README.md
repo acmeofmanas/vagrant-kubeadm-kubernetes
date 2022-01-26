@@ -12,7 +12,9 @@ Current k8s version for CKA, CKAD and CKS exam: 1.22
 ## Prerequisites
 
 1. Working Vagrant setup
-2. 8 Gig + RAM workstation as the Vms use 3 vCPUS and 4+ GB RAM
+2. Working parallel Desktop
+3. OS box is modified for Mac Arm64 users
+4. It will provision Master node 1.5GB memory & 1 CPU; 3 worker node with 1gb memory and 1 cpu
 
 ## For MAC Users
 
