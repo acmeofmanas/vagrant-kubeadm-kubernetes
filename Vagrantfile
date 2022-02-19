@@ -9,14 +9,15 @@ Vagrant.configure("2") do |config|
       master.vm.box = "mpasternak/focal64-arm"
       master.vm.hostname = "master-node"
       master.vm.provider "parallels" do |vb|
-          vb.memory = 1500
-          vb.cpus = 1
+          vb.memory = 2000
+          vb.cpus = 2
       end
       master.vm.provision "shell", path: "scripts/common.sh"
       master.vm.provision "shell", path: "scripts/master.sh"
+      master.vm.provision "shell", path: "scripts/setup-host.sh"
     end
 
-    (1..2).each do |i|
+    (1..1).each do |i|
   
     config.vm.define "node0#{i}" do |node|
       node.vm.box = "mpasternak/focal64-arm"
