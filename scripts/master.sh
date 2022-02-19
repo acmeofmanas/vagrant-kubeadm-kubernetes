@@ -83,5 +83,5 @@ sudo chown 1000:1000 /home/vagrant/.kube/config
 EOF
 
 
-
+kubectl set image deploy coredns coredns=k8s.gcr.io/coredns:1.7.0 -nkube-system
 
